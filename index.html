@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1877f2"><meta name="description" content="Façebook - شبكة اجتماعية مستقلة">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="style.css">
+<title>Façebook</title>
+</head><body>
+<header class="top"><a class="logo" href="#" onclick="return false">Façebook</a><div class="topright"><button id="langBtn" class="iconbtn" title="Language">文</button><button id="searchBtn" class="iconbtn">⌕</button><button id="accountBtn" class="iconbtn">☺</button></div></header>
+<div id="searchBar" class="searchbar hidden"><input id="searchInput" placeholder="ابحث عن أشخاص أو منشورات"><button id="searchGo" class="primary">بحث</button></div>
+<main>
+<section id="home" class="screen active">
+ <div class="card composer"><div class="hrow"><div class="avatar meAvatar">م</div><button id="composeBtn" class="prompt" data-t="whats">بماذا تفكر؟</button></div><div class="line"></div><div class="hrow spread"><button id="imageBtn">▧ <span data-t="photo">صورة</span></button><button id="storyBtn">◉ <span data-t="story">قصة</span></button><button id="postBtn" class="blueText">＋ <span data-t="post">نشر</span></button></div></div>
+ <div class="stories" id="stories"></div><div id="feed"></div>
+</section>
+<section id="friends" class="screen"><div class="heading"><h2 data-t="friends">الأصدقاء</h2><p data-t="friendSub">أشخاص قد تعرفهم</p></div><div id="friendList"></div></section>
+<section id="messages" class="screen"><div class="heading"><h2 data-t="messages">الرسائل</h2><p data-t="messageSub">محادثاتك</p></div><div id="messageList"></div><div class="card muted" data-t="demoMsg">واجهة تجريبية؛ الرسائل الحقيقية تحتاج خادماً واتصالاً بين المستخدمين.</div></section>
+<section id="notifications" class="screen"><div class="heading"><h2 data-t="notifications">الإشعارات</h2></div><div id="noticeList"></div></section>
+<section id="profile" class="screen"><div class="card profile"><div class="cover"></div><div class="avatar big meAvatar">م</div><h2 id="profileName">مستخدم Façebook</h2><p class="muted" data-t="welcome">مرحباً بك في شبكتك الاجتماعية</p><button id="editProfile" class="soft" data-t="edit">تعديل الملف الشخصي</button></div><div class="card"><h3 data-t="account">الحساب</h3><button id="logout" class="danger" data-t="logout">تسجيل الخروج</button></div></section>
+</main>
+<nav class="bottom">
+<button data-screen="home" class="active"><span>⌂</span><small data-t="home">الرئيسية</small></button>
+<button data-screen="friends"><span>♧</span><small data-t="friends">الأصدقاء</small></button>
+<button data-screen="messages"><span>✉</span><small data-t="messages">الرسائل</small></button>
+<button data-screen="notifications"><span>♢</span><small data-t="notifications">الإشعارات</small></button>
+<button data-screen="profile"><span>☺</span><small data-t="profile">ملفي</small></button>
+</nav>
+<dialog id="postDialog"><form method="dialog"><div class="dlghead"><h3 data-t="createPost">إنشاء منشور</h3><button class="close">×</button></div><textarea id="postText" rows="4" placeholder="بماذا تفكر؟"></textarea><button id="publishBtn" class="primary full" type="submit" data-t="publish">نشر الآن</button></form></dialog>
+<dialog id="authDialog"><form method="dialog"><h2>Façebook</h2><p class="muted" data-t="welcomePrompt">أنشئ ملفك التجريبي على هذا الجهاز</p><input id="displayName" placeholder="اسمك"><button id="startBtn" class="primary full" type="submit" data-t="continue">متابعة</button></form></dialog>
+<div id="toast" class="toast hidden"></div><footer>Façebook مستقل وغير تابع لشركة Facebook أو Meta.</footer>
+<script src="app.js"></script></body></html>
